@@ -6,11 +6,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>보안카드2</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <link rel="stylesheet" href="./resources/css/index.css" />
 </head>
 <body>
-  <div class="container">
-    <h5 class="mt-5">보안카드</h5>
+  <div class="container mt-5">
+    <div class="row gx-1">
+      <div class="col-1"><span><b>보안카드</b></span></div>
+      <div class="col-11 card-select-box">
+        <div class="row">
+          <div class="col">
+            <select class="form-select" aria-label="Default select example">
+              <option value="0" selected>가로</option>
+              <option value="1">세로</option>
+            </select>
+          </div>
+          <div class="col">
+            <select id="card-select__size" class="form-select" aria-label="Default select example">
+              <option value="0" selected>25개</option>
+              <option value="1">30개</option>
+              <option value="2">35개</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="securityCard"></div>
   </div>
+
   <!-- JS -->
   <script src="./resources/js/index.js"></script>
 </body>

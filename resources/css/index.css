@@ -1,5 +1,22 @@
-.card-number {
+.index-color {
+  background-color: rgb(21, 21, 252);
+  color: white;
+  width: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.card-number,
+.card-number__input {
+  text-align: center;
   width: 60px;
-  outline: none;
-  border: 0;
+}
+
+.card-select-box {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.card-select-box__width {
+  width: 33%;
 }
