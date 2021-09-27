@@ -34,19 +34,18 @@ function createCard(index) {
       securityCard.innerHTML += rowTemplate;
       cardRow[indexNumber].innerHTML += `
         <div class="col-auto index-color">${i}</div>
-        <div class="col-1 card-number"><input class="card-number__input" type="text"></div>
+        <div class="col-1 card-number"><input class="card-number__input" data-index-number="${i-1}" type="text"></div>
       `
     } else {
       cardRow[indexNumber].innerHTML += `
         <div class="col-auto index-color">${i}</div>
-        <div class="col-1 card-number"><input class="card-number__input" type="text"></div>
+        <div class="col-1 card-number"><input class="card-number__input" data-index-number="${i-1}" type="text"></div>
       `
       if (i % 5 == 0 ) {
         indexNumber++;
       } 
     }
     let cardNumber = cardNumbers[i-1];
-    cardNumber.dataset.indexNumber = i-1;
     console.log(cardNumbers[cardNumber.dataset.indexNumber]);
     cardNumber.addEventListener('input', setFocus);
   }
@@ -54,7 +53,7 @@ function createCard(index) {
 
 function setFocus(event) {
   let index = Number(this.dataset.indexNumber);
-  console.log(index);
+  console.log('개같은거 마지막인덱스 인풋태그만 이벤트 걸려');
   if (event.target.value.length === 4) {
     if (cardNumbers[index + 1] != undefined) {
       cardNumbers[index + 1].focus();
